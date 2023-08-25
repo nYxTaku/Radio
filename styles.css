@@ -1,0 +1,211 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+    color: pink;
+  }
+ 
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    opacity: 40%;
+  }
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #191919;
+  }
+  
+  header {
+    background-color: #ae6dbb68;
+    color: white;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .playlist {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.462);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .playlist h2 {
+    color: pink;
+    padding-bottom: 10px;
+  }
+
+  .playlist-container {
+    height: 400px; 
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  /* scrollbar track */
+  .playlist-container::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  /* scrollbar thumb (the draggable part) */
+  .playlist-container::-webkit-scrollbar-thumb {
+    background-color: #ae6dbb68; 
+    border-radius: 4px; 
+  }
+  
+  /* scrollbar track on hover */
+  .playlist-container::-webkit-scrollbar-thumb:hover {
+    background-color: #ae6dbb;
+  }
+  
+  /* scrollbar track when scrollbar is active (being clicked/dragged) */
+  .playlist-container::-webkit-scrollbar-thumb:active {
+    background-color: #804eb2;
+  }
+  
+  /* the scrollbar track (the background) */
+  .playlist-container::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .chat {
+    flex: .5;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5); /* Visible border */
+    background-color: rgba(0, 0, 0, 0.462);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .chat h2 {
+    color: pink;
+    padding: 5px;
+  }
+  
+  .playlist ul {
+    list-style: none;
+    padding: 0;
+    background-color: transparent;
+    color: pink;
+  }
+  
+  .playlist ul li {
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: pink;
+  }
+  
+  footer {
+    background-color: #ae6dbb68;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 98.7%;
+  }
+
+  .container-audio {
+    width: 66%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #444;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+
+  audio {
+    /* audio player color styles */
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid transparent;
+    width: 100%;
+  }
+  
+  /* controls inside the audio player */
+  audio::-webkit-media-controls-panel {
+    background-color: pink;
+    color: #fff;
+    border: 1px solid #ae6dbb68;
+  }
+  
+  audio:nth-child(2), audio:nth-child(4), audio:nth-child(6) {
+    margin: 0;
+  }
+  
+  @media (max-width: 900px) {
+    /* Styles for screens up to 900px wide */
+    main {
+      flex-direction: column; /* Stack sections vertically */
+    }
+  
+    .playlist,
+    .chat {
+      flex: auto; /* Allow sections to grow and take available space */
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 1400px) {
+    /* Additional styles for screens up to 1400px wide */
+    main {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* Additional styles for screens up to 600px wide */
+    header h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    
+    nav ul {
+      flex-direction: column; /* Stack navigation items on small screens */
+      align-items: center; /* Center navigation items */
+    }
+    
+    nav li {
+      margin: 5px 0; /* Adjust margin for smaller spacing */
+    }
+  }
+
